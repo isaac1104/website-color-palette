@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/isaac1104/website-color-palette#readme",
   "dependencies": {
+    "css-color-names": "^1.0.1",
     "express": "^4.17.1",
     "helmet": "^3.18.0"
   },
