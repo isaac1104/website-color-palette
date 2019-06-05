@@ -6,7 +6,7 @@ const INITIAL_STATE = {
   errorMsg: null
 };
 
-const colorsReducer = (state, { type, payload }) => {
+const colorsReducer = (state = INITIAL_STATE, { type, payload }) => {
   switch (type) {
     case FETCH_COLORS_DATA_REQUEST:
       return {

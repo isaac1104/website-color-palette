@@ -22,7 +22,7 @@ export const fetchColorsData = () => async dispatch => {
     const request = await axios.get('/api/colors');
     const { data } = request;
     dispatch(fetchColorsDataSuccess(data));
-  } catch (e) {
+  } catch (error) {
     dispatch(fetchColorsDataFail(error));
   }
 };
