@@ -1,16 +1,25 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Card, Typography } from 'antd';
+import { Card, Typography, message } from 'antd';
 import styles from './SelectedColorCard.module.css';
 import ColorBlock from './ColorBlock';
 
 class SelectedColorCard extends Component {
   renderColorDetail({ title, hex }, index) {
     return (
-      <Typography key={index} className={styles.SelectedColorRow}>
+      <Typography
+        key={index}
+        className={styles.SelectedColorRow}
+        onClick={() => this.handleCopyToClipboard(hex)}
+      >
         {title}: {hex} <ColorBlock hex={hex} />
       </Typography>
     );
+  }
+
+  handleCopyToClipboard(hex) {
+    navigator.clipboard.writeText(hex);
+    message.success(`Copied ${hex} to clipboard!`);
   }
 
   render() {
