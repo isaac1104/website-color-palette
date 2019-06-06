@@ -1,8 +1,14 @@
-import React from 'react';
-import Home from './Home/Home';
+import React, { Suspense, lazy } from 'react';
+import Spinner from './Spinner/Spinner';
+
+const Home = lazy(() => import('./Home/Home'));
 
 const App = () => {
-  return <Home />;
+  return (
+    <Suspense fallback={<Spinner />}> 
+      <Home />
+    </Suspense>
+  );
 };
 
 export default App;
