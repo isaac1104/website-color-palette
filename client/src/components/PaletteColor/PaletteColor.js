@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './PaletteColor.module.css';
 
 const PaletteColor = ({ color, onClick }) => {
-  const { hex, name } = color;
+  const { hex } = color;
   return (
     <div
       className={styles.PaletteColor}
