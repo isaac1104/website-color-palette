@@ -14,6 +14,7 @@ class Website extends Component {
         key={index}
         level={level}
         style={{ color }}
+        className={styles.WebsiteText}
       >
         {content}
       </Title>
@@ -21,7 +22,15 @@ class Website extends Component {
   }
 
   renderTexts(color) {
-    return TEXTS.map(({ content }, index) => <Typography key={index} style={{ color }}>{content}</Typography>);
+    return TEXTS.map(({ content }, index) => (
+      <Typography
+        key={index}
+        style={{ color }}
+        className={styles.WebsiteText}
+      >
+        {content}
+      </Typography>
+    ));
   }
 
   render() {

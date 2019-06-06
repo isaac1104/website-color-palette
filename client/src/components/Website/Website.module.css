@@ -1,6 +1,7 @@
 .WebsiteContainer {
   height: 100vh;
   padding: 2em;
+  transition: background-color 0.5s ease;
 }
 
 .WebsiteHeader {
@@ -14,8 +15,13 @@
   margin-top: 5em;
 }
 
+.WebsiteText {
+  transition: color 0.5s ease;
+}
+
 .BuyNowButton {
   margin-top: 2em;
+  transition: background-color 0.5s ease;
 }
 
 .ProductImage {
