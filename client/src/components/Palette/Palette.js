@@ -24,6 +24,7 @@ class Palette extends Component {
           <PaletteColor
             key={color.name}
             color={color}
+            onClick={() => console.log(color.name)}
           />
         ))}
       </TabPane>

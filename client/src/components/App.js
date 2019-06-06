@@ -1,15 +1,8 @@
 import React from 'react';
-import { Col, Row } from 'antd';
-import Palette from './Palette/Palette';
+import Home from './Home/Home';
 
 const App = () => {
-  return (
-    <Row>
-      <Col xs={6} sm={6} md={6} lg={6} xl={6}>
-        <Palette />
-      </Col>
-    </Row>
-  );
+  return <Home />;
 };
 
 export default App;
