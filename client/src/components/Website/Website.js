@@ -8,46 +8,40 @@ import { HEADERS, TEXTS } from './WebsiteContents';
 const { Title } = Typography;
 
 class Website extends Component {
-  state = {
-    background: '#ffffff',
-    text: '#000000',
-    button: '#ffffff'
-  };
-
-  renderHeaders(section) {
+  renderHeaders(section, color) {
     return HEADERS[section].map(({ content, level }, index) => (
       <Title
         key={index}
         level={level}
-        style={{ color: 'black' }}
+        style={{ color }}
       >
         {content}
       </Title>
     ));
   }
 
-  renderTexts() {
-    return TEXTS.map(({ content }, index) => <Typography key={index} style={{ color: this.state.text }}>{content}</Typography>);
+  renderTexts(color) {
+    return TEXTS.map(({ content }, index) => <Typography key={index} style={{ color }}>{content}</Typography>);
   }
 
   render() {
-    console.log(this.props.selected_color);
+    const { background, text, button } = this.props.selected_color;
     return (
       <div
         className={styles.WebsiteContainer}
-        style={{ backgroundColor: this.state.background }}
+        style={{ backgroundColor: background }}
       >
         <div className={styles.WebsiteHeader}>
-          {this.renderHeaders('top')}
+          {this.renderHeaders('top', text)}
         </div>
         <div className={styles.WebsiteProduct}>
           <div>
-            {this.renderHeaders('bottom')}
-            {this.renderTexts()}
+            {this.renderHeaders('bottom', text)}
+            {this.renderTexts(text)}
             <Button
               size='large'
               className={styles.BuyNowButton}
-              style={{ backgroundColor: this.state.button }}
+              style={{ backgroundColor: button }}
             >
               Buy Now!
             </Button>
