@@ -1,0 +1,23 @@
+.WebsiteContainer {
+  height: 100vh;
+  padding: 2em;
+}
+
+.WebsiteHeader {
+  text-align: center;
+}
+
+.WebsiteProduct {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5em;
+}
+
+.BuyNowButton {
+  margin-top: 2em;
+}
+
+.ProductImage {
+  width: 100%;
+}
