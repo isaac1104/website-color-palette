@@ -50,7 +50,7 @@ class Website extends Component {
             <Button
               size='large'
               className={styles.BuyNowButton}
-              style={{ backgroundColor: button, color: button_text }}
+              style={{ backgroundColor: button, color: button_text, borderColor: button }}
             >
               Buy Now!
             </Button>
