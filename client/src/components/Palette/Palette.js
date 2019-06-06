@@ -34,9 +34,9 @@ class Palette extends Component {
   render() {
     return (
       <Tabs tabPosition='left'>
-        {this.renderPaletteColors('Background Colors')}
-        {this.renderPaletteColors('Text Colors')}
-        {this.renderPaletteColors('Button Colors')}
+        {this.renderPaletteColors('Background')}
+        {this.renderPaletteColors('Text')}
+        {this.renderPaletteColors('Button')}
       </Tabs>
     );
   }
