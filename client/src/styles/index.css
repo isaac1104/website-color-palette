@@ -5,3 +5,9 @@ body {
   padding: 0;
   font-family: 'Poppins', sans-serif;
 }
+
+.ant-tabs .ant-tabs-left-bar {
+  background-color: #202025 !important;
+  color: #ffffff;
+  height: 100vh;
+}

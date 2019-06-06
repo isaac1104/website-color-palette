@@ -1,6 +1,6 @@
 .WebsiteContainer {
   height: 100vh;
-  padding: 2em;
+  padding: 3em;
   transition: background-color 0.5s ease;
 }
 
