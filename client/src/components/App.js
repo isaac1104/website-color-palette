@@ -1,24 +1,15 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { fetchColorsData } from '../actions';
+import React from 'react';
+import { Col, Row } from 'antd';
+import Palette from './Palette/Palette';
 
-class App extends Component {
-  componentDidMount() {
-    this.props.fetchColorsData();
-  }
-
-  render() {
-    console.log(this.props.colors);
-    return (
-      <h1>App</h1>
-    );
-  }
-}
-
-const mapStateToProps = ({ colors }) => {
-  return {
-    colors
-  };
+const App = () => {
+  return (
+    <Row>
+      <Col xs={6} sm={6} md={6} lg={6} xl={6}>
+        <Palette />
+      </Col>
+    </Row>
+  );
 };
 
-export default connect(mapStateToProps, { fetchColorsData })(App);
+export default App;

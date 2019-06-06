@@ -1,0 +1,4 @@
+.Palette {
+  display: flex;
+  flex-wrap: wrap;
+}
