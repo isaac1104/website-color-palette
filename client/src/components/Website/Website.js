@@ -34,7 +34,7 @@ class Website extends Component {
   }
 
   render() {
-    const { background, text, button } = this.props.selected_color;
+    const { background, text, button, button_text } = this.props.selected_color;
     return (
       <div
         className={styles.WebsiteContainer}
@@ -50,7 +50,7 @@ class Website extends Component {
             <Button
               size='large'
               className={styles.BuyNowButton}
-              style={{ backgroundColor: button }}
+              style={{ backgroundColor: button, color: button_text }}
             >
               Buy Now!
             </Button>

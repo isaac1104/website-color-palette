@@ -5,7 +5,8 @@ import {
   FETCH_COLORS_DATA_FAIL,
   SELECT_BACKGROUND_COLOR,
   SELECT_TEXT_COLOR,
-  SELECT_BUTTON_COLOR
+  SELECT_BUTTON_COLOR,
+  SELECT_BUTTON_TEXT_COLOR
 } from './types';
 
 const fetchColorsDataRequest = () => ({
@@ -46,5 +47,10 @@ export const selectTextColor = hex => ({
 
 export const selectButtonColor = hex => ({
   type: SELECT_BUTTON_COLOR,
+  payload: hex
+});
+
+export const selectButtonTextColor = hex => ({
+  type: SELECT_BUTTON_TEXT_COLOR,
   payload: hex
 });
