@@ -39,7 +39,7 @@ export const selectBackgroundColor = hex => ({
   payload: hex
 });
 
-export const selecTextColor = hex => ({
+export const selectTextColor = hex => ({
   type: SELECT_TEXT_COLOR,
   payload: hex
 });

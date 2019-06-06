@@ -8,7 +8,7 @@ import { HEADERS, TEXTS } from './WebsiteContents';
 const { Title } = Typography;
 
 class Website extends Component {
-  renderHeaders(section, color) {
+  renderHeaders({ section, color }) {
     return HEADERS[section].map(({ content, level }, index) => (
       <Title
         key={index}
@@ -32,11 +32,11 @@ class Website extends Component {
         style={{ backgroundColor: background }}
       >
         <div className={styles.WebsiteHeader}>
-          {this.renderHeaders('top', text)}
+          {this.renderHeaders({ section: 'top', color: text  })}
         </div>
         <div className={styles.WebsiteProduct}>
           <div>
-            {this.renderHeaders('bottom', text)}
+            {this.renderHeaders({ section: 'bottom', color: text })}
             {this.renderTexts(text)}
             <Button
               size='large'

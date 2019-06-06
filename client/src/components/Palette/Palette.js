@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Tabs } from 'antd';
 import PaletteColor from '../PaletteColor/PaletteColor';
-import { fetchColorsData } from '../../actions';
+import { fetchColorsData, selectBackgroundColor, selectTextColor, selectButtonColor } from '../../actions';
 import styles from './Palette.module.css';
 
 const { TabPane } = Tabs;
@@ -12,19 +12,19 @@ class Palette extends Component {
     this.props.fetchColorsData();
   }
 
-  renderPaletteColors(tabName) {
+  renderPaletteColors({ type, event }) {
     const { data } = this.props.colors;
     return (
       <TabPane
-        tab={tabName}
-        key={tabName}
+        tab={type}
+        key={type}
         className={styles.PaletteTabPane}
       >
         {data.map(color => (
           <PaletteColor
             key={color.name}
             color={color}
-            onClick={() => console.log(color.name)}
+            onClick={() => event(color.hex)}
           />
         ))}
       </TabPane>
@@ -32,11 +32,12 @@ class Palette extends Component {
   }
 
   render() {
+    const { selectBackgroundColor, selectTextColor, selectButtonColor } = this.props;
     return (
       <Tabs tabPosition='left'>
-        {this.renderPaletteColors('Background')}
-        {this.renderPaletteColors('Text')}
-        {this.renderPaletteColors('Button')}
+        {this.renderPaletteColors({ type: 'Background', event: selectBackgroundColor })}
+        {this.renderPaletteColors({ type: 'Text', event: selectTextColor })}
+        {this.renderPaletteColors({ type: 'Button', event: selectButtonColor })}
       </Tabs>
     );
   }
@@ -48,4 +49,4 @@ const mapStateToProps = ({ colors }) => {
   };
 };
 
-export default connect(mapStateToProps, { fetchColorsData })(Palette);
+export default connect(mapStateToProps, { fetchColorsData, selectBackgroundColor, selectTextColor, selectButtonColor })(Palette);
