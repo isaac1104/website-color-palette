@@ -18,7 +18,7 @@ class Palette extends Component {
       <TabPane
         tab={tabName}
         key={tabName}
-        className={styles.Palette}
+        className={styles.PaletteTabPane}
       >
         {data.map(color => (
           <PaletteColor
