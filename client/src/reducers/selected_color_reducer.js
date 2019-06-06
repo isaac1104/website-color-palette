@@ -3,8 +3,8 @@ import { SELECT_BACKGROUND_COLOR, SELECT_TEXT_COLOR, SELECT_BUTTON_COLOR, SELECT
 const INITIAL_STATE = {
   background: '#ffffff',
   text: '#000000',
-  button: '#ffffff',
-  button_text: '#000000'
+  button: '#000000',
+  button_text: '#ffffff'
 };
 
 const selectedColorReducer = (state = INITIAL_STATE, { type, payload }) => {
