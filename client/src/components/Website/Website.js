@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Button, Typography } from 'antd';
 import styles from './Website.module.css';
 import macbook from '../../assets/macbook_pro_15.png';
@@ -26,10 +27,11 @@ class Website extends Component {
   }
 
   renderTexts() {
-    return TEXTS.map(({ content }) => <Typography style={{ color: this.state.text }}>{content}</Typography>);
+    return TEXTS.map(({ content }, index) => <Typography key={index} style={{ color: this.state.text }}>{content}</Typography>);
   }
 
   render() {
+    console.log(this.props.selected_color);
     return (
       <div
         className={styles.WebsiteContainer}
@@ -57,4 +59,10 @@ class Website extends Component {
   }
 }
 
-export default Website;
+const mapStateToProps = ({ selected_color }) => {
+  return {
+    selected_color
+  };
+};
+
+export default connect(mapStateToProps)(Website);

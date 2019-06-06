@@ -1,5 +1,12 @@
 import axios from 'axios';
-import { FETCH_COLORS_DATA_REQUEST, FETCH_COLORS_DATA_SUCCESS, FETCH_COLORS_DATA_FAIL } from './types';
+import {
+  FETCH_COLORS_DATA_REQUEST,
+  FETCH_COLORS_DATA_SUCCESS,
+  FETCH_COLORS_DATA_FAIL,
+  SELECT_BACKGROUND_COLOR,
+  SELECT_TEXT_COLOR,
+  SELECT_BUTTON_COLOR
+} from './types';
 
 const fetchColorsDataRequest = () => ({
   type: FETCH_COLORS_DATA_REQUEST,
@@ -26,3 +33,18 @@ export const fetchColorsData = () => async dispatch => {
     dispatch(fetchColorsDataFail(error));
   }
 };
+
+export const selectBackgroundColor = hex => ({
+  type: SELECT_BACKGROUND_COLOR,
+  payload: hex
+});
+
+export const selecTextColor = hex => ({
+  type: SELECT_TEXT_COLOR,
+  payload: hex
+});
+
+export const selectButtonColor = hex => ({
+  type: SELECT_BUTTON_COLOR,
+  payload: hex
+});
