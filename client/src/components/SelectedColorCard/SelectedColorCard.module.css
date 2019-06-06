@@ -1,0 +1,19 @@
+.SelectedColorCard {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5em;
+  width: 20em;
+}
+
+.SelectedColorRow {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.ColorBlock {
+  width: 1em;
+  height: 1em;
+  margin-left: 0.2em;
+}

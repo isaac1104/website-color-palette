@@ -4,6 +4,7 @@ import { Button, Typography } from 'antd';
 import styles from './Website.module.css';
 import macbook from '../../assets/macbook_pro_15.png';
 import { HEADERS, TEXTS } from './WebsiteContents';
+import SelectedColorCard from '../SelectedColorCard/SelectedColorCard';
 
 const { Title } = Typography;
 
@@ -57,6 +58,7 @@ class Website extends Component {
           </div>
           <img src={macbook} alt='Macbook Pro 15-inch' className={styles.ProductImage} />
         </div>
+        <SelectedColorCard />
       </div>
     );
   }
