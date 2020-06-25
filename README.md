@@ -10,7 +10,7 @@ Not sure which color combinations look best on your website? Use the Website Col
 
 ## To use the app
 
-1. Click the [link](https://isaac-smtm.herokuapp.com) to go to the website
+1. Click the [link](https://website-color-palette.herokuapp.com/) to go to the website
 2. Enjoy the app!
 
 ## Tech Stack
